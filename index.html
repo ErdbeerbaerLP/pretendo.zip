@@ -1,0 +1,228 @@
+<html>
+
+<head>
+<title>Pretendo.zip Builder - Select console</title>
+
+</head>
+
+<body>
+<div id="selector" style="display: inline-block;">
+<h1>Select your console</h1><br>
+<div style="display: inline-block; vertical-align: top; width: 45%; text-align: center;"><input type="image" name="btn3ds" id="btn3ds" style="width: 100%;" src="assets/bandwidth-3ds.webp"/> <span>3DS</span></div>
+<div style="display: inline-block; vertical-align: top; width: 45%; text-align: center;"><input type="image" name="btnWiiu" id="btnWiiu" style="width: 100%;" src="assets/bandwidth-wiiu.webp"/> <span>Wii U</span></div>
+</div>
+<noscript><h1>This page depends on JavaScript!</h1></noscript>
+<!--    3DS    -->
+<div id="T3ds1" style="display: none">
+<h1>Is your 3DS already modded?</h1>
+<input type="button" id="btn3dsModded" name="btn3dsModded" value="Yes"/>&nbsp;&nbsp;<input type="button" id="btn3dsStock" value="No"/><br><br>
+<div id="3dsModdingInfo" style="display: none">
+<h2>Non-Modded 3DS</h2>
+To use Pretendo, your 3DS has to be modded.<br>
+Modding a 3DS is out of scope of this website.<br>
+The process of modding a 3DS is very well described at <a target="_blank" href="https://3ds.hacks.guide/">https://3ds.hacks.guide/</a>.<br>
+Once you completed the modding process, return to here!<br>
+Do NOT use video guides!
+</div>
+</div>
+<div id="T3ds2" style="display: none">
+<h1>Pretendo for 3DS</h1>
+<h3 id="packagestatus">Preparing and downloading your SD Card package...</h3>
+If the download did not start within a minute, reload and try again<br><br><br>
+This download was provided by <a href="https://pretendo.network">pretendo.network</a><br>
+Consider <a href="https://pretendo.network/account/upgrade">donating</a> to Pretendo
+</div>
+
+<!--   WII U  -->
+<div id="wiiu1" style="display: none">
+<h1>Is your Wii U already modded (with Aroma CFW)?</h1>
+<input type="button" id="btnWiiUModded" name="btnWiiUModded" value="Yes"/>&nbsp;&nbsp;<input type="button" id="btnWiiUStock" value="No"/><br><br>
+
+<div id="wiiUModdingInfo" style="display: none">
+<h2>Non-Modded Wii U</h2>
+To use Pretendo, it is recommended to mod your Wii U console.<br>
+There is an mod-less method using custom DNS settings, however this method is really limited.<br>
+Some games may not work properly and miiverse (juxt) won't work at all using that.<br>
+<br><br>
+<h3>Do you want to mod your console?</h3>
+<input type="button" id="btnWiiUAroma" name="btnWiiUAroma" value="Yes (Install Aroma)"/>&nbsp;&nbsp;<input type="button" id="btnWiiUDNS" value="No (Use DNS)"/><br><br>
+</div>
+
+</div>
+
+<div id="wiiuDNS" style="display: none">
+<h1>Wii U DNS Settings</h1>
+Use these DNS Settings to connect to Pretendo!<br><br>
+<b>PRIMARY DNS:</b> 88.198.140.154, <b>SECONDARY DNS:</b> 8.8.8.8 or 1.1.1.1
+</div>
+
+<div id="wiiuAroma" style="display: none">
+<h1>Select additional packages</h1>
+<input type="checkbox" id="aroma1" value="wiiu-nanddumper-payload" checked/>
+<label for="aroma1">Nanddumper Payload (recommended!)<br>Lets you dump your NAND</label><br><br>
+<input type="checkbox" id="aroma2" value="bloopair" checked/>
+<label for="aroma2">Bloopair<br>Connect non-wiiu controllers</label><br><br>
+<input type="checkbox" id="aroma3" value="ftpiiu"/>
+<label for="aroma3">FTPiiU<br>Access your Wii U via FTP</label><br><br>
+<input type="checkbox" id="aroma4" value="swipswapme" checked/>
+<label for="aroma4">SwipSwapMe<br>Swap your Gamepad and TV screen</label><br><br>
+<input type="checkbox" id="aroma5" value="screenshotplugin"/>
+<label for="aroma5">Screenshot Plugin<br>Allows you to take screenshots</label><br><br>
+<input type="checkbox" id="aroma6" value="sdcafiine" />
+<label for="aroma6">SDCafiine Plugin<br>SDCafiine allows you to mod your games by replacing files on-the-fly</label><br><br>
+<input type="checkbox" id="hbappstore" value="hbappstore" checked/>
+<label for="hbappstore">Homebrew App Store<br>Bundle the homebrew app store, an easy way to download homebrew</label><br><br>
+<input type="checkbox" id="sigpatches" value="sigpatches"/>
+<label for="sigpatches">Signature Patches<br>ONLY(!) needed for running Virtual Console Injects. If you don't plan to do this, skip this!</label><br><br>
+<input type="button" id="btnWiiUPackage" name="btnWiiUPackage" value="Build .zip"/>
+
+</div>
+<div id="wiiuBuild" style="display: none">
+<h1>Pretendo for Wii U</h1>
+<h3 id="packagestatus2">Preparing and downloading your SD Card package...</h3>
+If the download did not start within a minute, reload and try again<br><br>
+Extract the .zip onto the SD Card<br><br><br>
+This download was provided by <a href="https://pretendo.network">pretendo.network</a> and <a href="https://aroma.foryour.cafe">aroma.foryour.cafe</a><br>
+Consider <a href="https://pretendo.network/account/upgrade">donating</a> to Pretendo
+</div>
+
+<div id="wiiuAromaTut" style="display: none">
+<h3>Running Aroma</h3>
+Make sure you are on the Firmware version 5.5.5 or 5.5.6(US Only)<br>
+To run Aroma, navigate to "wiiuexploit.xyz" and tap "Run Exploit".<br>
+(Optional, but recommended) Run Nanddumper payload by holding B after pressing the button and do a NAND Backup. Then redo above step to continue.<br>
+Run the "aroma" environment, boot to Wii U menu. You can also set both to default. If you get an popup about blocking updates, feel free to do so.<br>
+You are now in Aroma. Use L + Down + SELECT to open the Aroma menu.<br><br>
+<h3>Installing Aroma</h3>
+To fully install Aroma, run the Payload Loader Installer on your home menu.<br>
+Select "Install/Update" and install. After turning your console back on, Aroma can be booted by launching the "Health and Safety information" app.<br>
+To make Aroma run when turning the console on, open the Paload Loader Installer again and select "Boot options" and "Switch to PayloadLoader".<br>
+Installation is now finished!
+</div>
+
+
+<a hidden id="save">save</a>
+<progress id="progress" value="0" style="display: none"></progress>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"> </script>
+
+
+<script>
+function downloadFile(url, filename) {
+  $('<a>', {
+    href: url,
+    download: filename,
+    target: '_blank'
+  })[0].click();
+}
+
+class ReaderIterator {
+  constructor(reader) {
+    this.reader = reader;
+  }
+
+  [Symbol.asyncIterator]() {
+    return this;
+  }
+
+  async next() {
+    return this.reader.read();
+  }
+}
+$( document ).ready(function() {
+  const progress = $('#packagestatus, #packagestatus2');
+  function downloadWithStatus(inurl, filename){
+    fetch(inurl, { redirect: 'follow'}).then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const reader = response.body.getReader();
+      const iterator = new ReaderIterator(reader);
+      const contentType = response.headers.get('Content-Type');
+      const contentLength = parseInt(response.headers.get('Content-Length'));
+      const chunks = [];
+
+      progress.max = contentLength;
+
+      function readChunk() {
+        return iterator.next().then(({ done, value }) => {
+          if (done) {
+            const url = URL.createObjectURL(new Blob(chunks, { type: contentType }));
+          
+            // Immediately start the download
+            downloadFile(url, filename);
+            progress.each(function(){$(this).text('Package download has been started!');});
+          } else {
+            chunks.push(value);
+            progress.value += value.length;
+            return readChunk();
+          }
+        });
+      }
+
+      return readChunk();
+    }).catch(error => {
+      console.error('Error fetching file:', error);
+    });
+  }
+
+  $("#btn3ds").on('click',function(){
+    $("#selector").hide();
+    $("#T3ds1").show();
+  });
+  $("#btn3dsModded").on('click',function(){
+    $("#T3ds1").hide();
+    $("#T3ds2").show();
+    downloadFile("https://github.com/PretendoNetwork/nimbus/releases/download/v1.6.0/combined.1.6.0.zip", "[3DS] Pretendo Network.zip");
+  });
+  $("#btn3dsStock").on('click',function(){
+    $("#3dsModdingInfo").show();
+  });
+  $("#btnWiiu").on('click',function(){
+    $("#selector").hide();
+    $("#wiiu1").show();
+  });
+  $("#btnWiiUStock").on('click',function(){
+    $("#wiiUModdingInfo").show();
+  });
+  $("#btnWiiUAroma").on('click',function(){
+    $("#wiiu1").hide();
+    $("#wiiuAroma").show();
+  });
+  $("#btnWiiUDNS").on('click',function(){
+    $("#wiiu1").hide();
+    $("#wiiuDNS").show();
+  });
+  $("#btnWiiUPackage").on('click',function(){
+    var dlStr = "wiiu.php?aroma=";
+    $('#aroma1, #aroma2, #aroma3, #aroma4, #aroma5, #aroma6').each(function(){
+       console.log(this);
+       if($(this).is(':checked')){
+          dlStr = dlStr+$(this).val()+","
+       }
+    });
+    if($('#hbappstore').is(':checked'))
+       dlStr = dlStr+"&hbappstore";
+    if($('#sigpatches').is(':checked'))
+       dlStr = dlStr+"&sigpatches";
+    console.log(dlStr);
+  
+    
+    downloadWithStatus(dlStr, "[Wii U] Pretendo Network CFW Package.zip");
+    
+    $("#wiiuAroma").hide();
+    $("#wiiuBuild").show();
+    $("#wiiuAromaTut").show();
+  });
+  $("#btnWiiUModded").on('click',function(){
+    var dlStr = "wiiu.php";
+    downloadWithStatus(dlStr, "[Wii U] Pretendo Network.zip");
+    $("#wiiu1").hide();
+    $("#wiiuBuild").show();
+  });
+
+});
+</script>
+
+</body>
+</html>
