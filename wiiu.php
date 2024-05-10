@@ -163,7 +163,7 @@ if (isset($_GET["aroma"])) {
         $_GET["aroma"];
     $addonDir = downloadAndUnzip($addonUrl);
     $aromaDir = downloadAndUnzip(
-        "https://github.com/wiiu-env/Aroma/releases/download/beta-17/aroma-beta-17.zip"
+        "https://github.com/wiiu-env/Aroma/releases/download/beta-19/aroma-beta-19.zip"
     );
     move($aromaDir . "/wiiu", $targetDir . "/wiiu");
     move($addonDir . "/wiiu", $targetDir . "/wiiu");
