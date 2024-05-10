@@ -80,7 +80,7 @@ a {
     </div>
     <div id="T3ds2" style="display: none">
         <h1>Pretendo for 3DS</h1>
-        <h3 id="packagestatus">Preparing and downloading your SD Card package...</h3>
+        <h3 id="packagestatus">Preparing and downloading your SD Card package... <img src="assets/loading.gif" style="height: 30px;"/></h3>
         If the download did not start within a minute, reload and try again<br><br><br>
         Extract the .zip onto the <a href="https://gbatemp.net/threads/what-is-the-root-of-a-sd-memory-card.48913/post-620120" target="_blank">root</a> folder of your SD Card.<br><br>
         Hold the SELECT button on your 3DS and power it on.<br><br>
@@ -249,7 +249,7 @@ To switch back you can run nimbus again and select "Nintendo"
             $("#btn3dsModded").on('click', function() {
                 $("#T3ds1").hide();
                 $("#T3ds2").show();
-                downloadFile("https://github.com/PretendoNetwork/nimbus/releases/download/v1.6.0/combined.1.6.0.zip", "[3DS] Pretendo Network.zip");
+                downloadWithStatus("3ds.php", "[3DS] Pretendo Network.zip");
             });
             $("#btn3dsStock").on('click', function() {
                 $("#3dsModdingInfo").css('display', 'inline-block');
