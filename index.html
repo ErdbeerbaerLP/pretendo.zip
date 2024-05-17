@@ -55,7 +55,7 @@ a {
 <div id="selector">
     <h1>Select your console</h1>
     <div style="display: inline-block;">
-        <div style="display: inline-block; vertical-align: top; width: 45%; text-align: center;"><input type="image" name="btn3ds" id="btn3ds" style="width: 240px; height: 240px;" src="https://pretendo.zip/assets/3ds.png" /> <span>3DS</span></div>
+        <div style="display: inline-block; vertical-align: top; width: 45%; text-align: center;"><input type="image" name="btn3ds" id="btn3ds" style="width: 240px; height: 240px;" src="assets/bandwidth-3ds.png" /> <span>3DS</span></div>
         <div style="display: inline-block; vertical-align: top; width: 45%; text-align: center;"><input type="image" name="btnWiiu" id="btnWiiu" style="width: 240px; height: 240px;" src="https://pretendo.network/assets/images/bandwidth.svg" /> <span>Wii U</span></div>
     </div>
     <noscript>
@@ -195,6 +195,13 @@ To switch back you can run nimbus again and select "Nintendo"
             }
         }
         $(document).ready(function() {
+		    var randomNumber = Math.random();
+                
+            if (randomNumber < 0.05) {
+                $("#btn3ds").attr("src", 'assets/bandwidth-3ds-saul.png');
+            }
+		
+		
             const progress = $('#packagestatus, #packagestatus2');
 
             function downloadWithStatus(inurl, filename) {
