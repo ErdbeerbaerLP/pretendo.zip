@@ -44,10 +44,11 @@ if (isset($_GET["sigpatches"])) {
 }
 
 //Copy pretendo base files
-copy(
-    "https://github.com/PretendoNetwork/Inkay/releases/latest/download/Inkay-pretendo.wps",
-    $targetDir . "/wiiu/environments/aroma/plugins/Inkay-pretendo.wps"
-);
+$inkay = downloadAndUnzip(
+        "https://github.com/fortheusers/hb-appstore/releases/latest/download/wiiu-extracttosd.zip"
+    );
+
+move($inkay, $targetDir . "/wiiu/environments/aroma/plugins/");
 copy(
     "https://github.com/PretendoNetwork/Nimble/releases/latest/download/30_nimble.rpx",
     $targetDir . "/wiiu/environments/aroma/modules/setup/30_nimble.rpx"
