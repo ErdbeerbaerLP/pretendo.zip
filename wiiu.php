@@ -45,7 +45,7 @@ if (isset($_GET["sigpatches"])) {
 
 //Copy pretendo base files
 $inkay = downloadAndUnzip(
-        "https://github.com/fortheusers/hb-appstore/releases/latest/download/wiiu-extracttosd.zip"
+        "https://github.com/PretendoNetwork/Inkay/releases/latest/download/Inkay-pretendo.zip"
     );
 
 move($inkay, $targetDir . "/wiiu/environments/aroma/plugins/");
