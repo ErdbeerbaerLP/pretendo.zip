@@ -48,7 +48,17 @@ $inkay = downloadAndUnzip(
         "https://github.com/PretendoNetwork/Inkay/releases/latest/download/Inkay-pretendo.zip"
     );
 
-move($inkay, $targetDir . "/wiiu/environments/aroma/plugins/");
+// Scan the extracted directory for .wps files
+foreach (scandir($inkay) as $file) {
+    if (pathinfo($file, PATHINFO_EXTENSION) === "wps") {
+        copy($inkay . "/" . $file, $targetDir . "/wiiu/environments/aroma/plugins/". $file);
+    }
+    
+    if (pathinfo($file, PATHINFO_EXTENSION) === "wms") {
+        copy($inkay . "/" . $file, $targetDir . "/wiiu/environments/aroma/modules/". $file);
+    }
+}
+
 copy(
     "https://github.com/PretendoNetwork/Nimble/releases/latest/download/30_nimble.rpx",
     $targetDir . "/wiiu/environments/aroma/modules/setup/30_nimble.rpx"
